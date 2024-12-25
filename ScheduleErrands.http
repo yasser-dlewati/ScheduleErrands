@@ -1,0 +1,6 @@
+@ScheduleErrands_HostAddress = http://localhost:5081
+
+GET {{ScheduleErrands_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
