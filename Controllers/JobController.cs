@@ -44,7 +44,10 @@ namespace ScheduledErrands.Controllers
             if (job == null) return NotFound();
 
             job.Type = updatedJob.Type;
-            job.ScheduledTime = updatedJob.ScheduledTime;
+            job.RecurrenceType = updatedJob.RecurrenceType;
+            job.Frequency = updatedJob.Frequency;
+            job.SpecificTime = job.SpecificTime;
+            job.Description = job.Description;
 
             _liteDbService.ScheduledJobs.Update(job);
             return NoContent();
